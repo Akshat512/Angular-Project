@@ -1,0 +1,110 @@
+<div class="container-fluid mb-5">
+  <h2 align="center">Loan Application Form</h2>
+  <form #userForm="ngForm">
+    <!-- {{userForm.value | json}}
+    <hr>
+    {{userModel | json}} -->
+    <div class="form-group">
+
+      <label>Enter your Name: </label>
+
+      <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="name" [(ngModel)]="userModel.name">
+
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched" >**Name is required</small>
+
+    
+
+      <!-- {{name.valid}}  -->
+    </div>
+    <div class="form-group">
+      <label>Enter your Email</label>
+      <input type="email" class="form-control" name="email" required #email="ngModel"
+      [class.is-invalid]="email.invalid && email.touched"
+       [(ngModel)]="userModel.email">
+       <small class="text-danger" [class.d-none]="email.valid || email.untouched">**Email is required</small>
+    </div>
+    <div class="form-group">
+      <label>Enter your Mobile Number</label>
+      <input type="tel"
+       class="form-control"
+        name="phone" 
+        required
+        #phone="ngModel"
+        pattern="^\d{10}$"
+        [class.is-invalid]="phone.invalid && phone.touched"
+        [(ngModel)]="userModel.phone">
+        <small class="text-danger" [class.d-none]="phone.valid || phone.untouched" >**Mobile number is required</small>
+        <!-- {{phone.valid}} -->
+    </div> <br>
+    <div class="form-group">
+      <select class="custom-select" name="loan" [(ngModel)]="userModel.loan">
+        <option value="">I am interested in</option>
+        <option *ngFor="let loan of loans">{{ loan }}</option>
+      </select>
+    </div> <br>
+    <div class="mb-3">
+      <label>Gender</label>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="gender" value="male" [(ngModel)]="userModel.gender" >
+        <label class="form-check-label">Male</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="gender" value="female" [(ngModel)]="userModel.gender">
+        <label class="form-check-label">Female</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="gender" value="other" [(ngModel)]="userModel.gender">
+        <label class="form-check-label">Other</label>
+      </div>
+    </div>
+    <div ngModelGroup="address">
+      <div class="form-group">
+        <label>Street: </label>
+        <input type="text"
+         class="form-control"
+         required
+         #street="ngModel"
+         [class.is-invalid]="street.invalid && street.touched"
+         name="street"
+         [(ngModel)]="userModel.street">
+         <small class="text-danger" [class.d-none]="street.valid || street.untouched" >**Street is required</small>
+      </div>
+       <br>
+      <div class="form-group">
+        <label>City: </label>
+        <input type="text" class="form-control" name="city"
+        required
+         #city="ngModel"
+         [class.is-invalid]="city.invalid && city.touched"
+         [(ngModel)]="userModel.city">
+         <small class="text-danger" [class.d-none]="city.valid || city.untouched" >**City is required</small>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>State: </label>
+        <input type="text" class="form-control" name="state" 
+        required
+         #state="ngModel"
+         [class.is-invalid]="state.invalid && state.touched"
+        [(ngModel)]="userModel.state" >
+        <small class="text-danger" [class.d-none]="state.valid || state.untouched" >**State is required</small>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Postal Code: </label>
+        <input type="text" class="form-control" name="postalcode"
+        required
+        #postalcode="ngModel"
+        [class.is-invalid]="postalcode.invalid && postalcode.touched"
+         [(ngModel)]="userModel.postalcode" >
+         <small class="text-danger" [class.d-none]="postalcode.valid || postalcode.untouched" >**Postal code is required</small>
+      </div>
+      <br>
+    </div>
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" name="subscribe" [(ngModel)]="userModel.subscribe">
+      <label  class="form-check-label">Send me regular updates</label>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit Form</button>
+  </form>
+</div>

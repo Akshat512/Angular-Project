@@ -1,0 +1,10 @@
+.container-fluid{
+    background-color: rgb(27, 27, 27);
+}
+h2{
+    color: white;
+    font-style: italic;
+}
+form{
+    color: white;
+}

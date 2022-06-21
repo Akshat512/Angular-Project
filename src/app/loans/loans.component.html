@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <title>Assignment</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">FAST LOAN</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Categories</a>
+              <a class="nav-link" href="#">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <br><br>
+      <!---------------------------- Navbar ends here------------------------------------->
+      <div class="container-fluid">
+        <div class="row pt-10 pb-5" style="background-color: #f1f1f1;">
+            <div class="col-md-4 mt-5">
+                <img src="https://i.pinimg.com/736x/ab/c5/f0/abc5f0442efe2d9f4755dfa2adb35034.jpg" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8 mt-5">
+              <h1>FAST LOAN</h1>
+              <h1 class="display-6 pt-3 pb-2"><em>Need Loans? APPLY FOR ALL TYPES OF LOANS HERE.</em></h1>
+              <p class="h4 pt-2 pb-2">With our Fast Loan service , you can apply for various kinds of loans online. Get instant loan with absolute zero documentation. </p>
+              <button type="button" class="btn btn-dark mt-4">View Categories</button>
+            </div>
+            </div>
+        </div>
+        <br>
+      <!--------------------------- Container ends here ------------------------------------>
+
+      <div class="card text-center">
+        
+        <div class="card-body">
+          <h5 class="card-title">PERSONAL LOAN</h5>
+          <p class="card-text">Get personal loans of up to Rs.40 lakh and above at attractive rates starting at 7.90% p.a. with flexible tenures of up to 7 years. The process to apply for a personal loan is extremely simple and hassle-free and can be done through both online and offline channels.</p>
+          <a href="#" class="btn btn-dark">Apply Loan</a>
+        </div>
+      </div>
+      <div class="card text-center">
+        
+        <div class="card-body">
+          <h5 class="card-title">HOME LOAN</h5>
+          <p class="card-text">Buying a home is now easier than ever. With Fast Loan service home loan, we give you the best home loan interest rates on housing finance and a wide selection of property, so you can live your best life.</p>
+          <a href="#" class="btn btn-dark">Apply Loan</a>
+        </div>
+      </div>
+      <div class="card text-center">
+        
+        <div class="card-body">
+          <h5 class="card-title">CAR LOAN</h5>
+          <p class="card-text">Dreaming of owning a car? The Fast Loan service Car Loan aims to ensures that you drive around the city in your own vehicle! Avail a car loan, or opt for a pre-approved car loan, and get the best interest rates. </p>
+          <a href="#" class="btn btn-dark">Apply Loan</a>
+        </div>
+      </div>
+       <br>
+      <!--------------------------------- Cards end here  ---------------------------------------------->
+
+       <div class="row">
+      <img src="https://www.credit.com/wp-content/uploads/2014/04/the-best-ways-to-loan-money-to-friends-and-family.jpg" class="img-fluid col-md-6" alt="Responsive image">
+
+
+      <img src="https://www.nitinbhatia.in/wp-content/uploads/2016/07/Personal-Lending.jpg" class="img-fluid col-md-6 " alt="Responsive image">
+
+      </div>
+      <!-- ----------------------------Images end here ----------------------------------------------->
+      <div class="col-md-12 text-center click_it">
+      <button [routerLink]="['./Loans']" type="button" class="btn-dark btn-lg">Click here to Sign In</button>
+    </div>
+    <br>
+    <router-outlet></router-outlet>    
+</body>
+</html>
